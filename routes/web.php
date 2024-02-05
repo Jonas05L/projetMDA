@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resources([
+    'documents' => \App\Http\Controllers\DocumentController::class,
+    'customers' => \App\Http\Controllers\CustomerController::class,
+    'documenttypes' => \App\Http\Controllers\DocumenttypeController::class,
+    'products' => \App\Http\Controllers\ProductController::class
+
+]);
